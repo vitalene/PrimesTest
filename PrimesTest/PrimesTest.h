@@ -1,19 +1,35 @@
-//
-//  PrimesTest.h
-//  PrimesTest
-//
-//  Created by Neil Vitale on 9/21/16.
-//  Copyright © 2016 Neil Vitale. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-//! Project version number for PrimesTest.
-FOUNDATION_EXPORT double PrimesTestVersionNumber;
-
-//! Project version string for PrimesTest.
-FOUNDATION_EXPORT const unsigned char PrimesTestVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <PrimesTest/PublicHeader.h>
-
-
+func primes(upperBound: Int) -> [Int] {
+    upperBound
+    var possibilities = Array(2..<upperBound)
+    var listOfPrimes: [Int] = []
+    while !possibilities.isEmpty {
+        let thisPrime = possibilities.first!
+        listOfPrimes.append(possibilities.first!)
+        possibilities.remove(at: possibilities.startIndex)
+        possibilities = possibilities.filter {
+            item in item % thisPrime != 0
+        }
+    }
+    return listOfPrimes
+    }
+    
+    func factors(primes: [Int], numberToCheck: Int) -> [Int] {
+        let reversePrimes = primes.reversed()
+        var numberToCheck = numberToCheck
+        var myFactors: [Int] = []
+        for number in reversePrimes {
+            if numberToCheck % number == 0 {
+                myFactors.append(number)
+                let otherFactor = numberToCheck/number
+                numberToCheck = otherFactor
+                
+            }
+        }
+        
+        
+        return myFactors
+    }
+    
+    let myPrimes = primes(upperBound: 20)
+    
+    factors(primes: myPrimes, numberToCheck: 18)

@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2852887A1D930CED00244D49 /* PrimesTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 285288781D930CED00244D49 /* PrimesTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		285288A41D932F8400244D49 /* SumSquareDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285288A31D932F8400244D49 /* SumSquareDifference.swift */; };
+		28EC1E6C1D938D6800BE86B6 /* Multiples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC1E6B1D938D6800BE86B6 /* Multiples.swift */; };
+		28EC1E6E1D938D8F00BE86B6 /* SummationOfPrimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC1E6D1D938D8F00BE86B6 /* SummationOfPrimes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		285288751D930CED00244D49 /* PrimesTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimesTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		285288781D930CED00244D49 /* PrimesTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimesTest.h; sourceTree = "<group>"; };
 		285288791D930CED00244D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285288A31D932F8400244D49 /* SumSquareDifference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumSquareDifference.swift; sourceTree = "<group>"; };
+		28EC1E6B1D938D6800BE86B6 /* Multiples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Multiples.swift; sourceTree = "<group>"; };
+		28EC1E6D1D938D8F00BE86B6 /* SummationOfPrimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummationOfPrimes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				285288781D930CED00244D49 /* PrimesTest.h */,
+				285288A31D932F8400244D49 /* SumSquareDifference.swift */,
+				28EC1E6B1D938D6800BE86B6 /* Multiples.swift */,
+				28EC1E6D1D938D8F00BE86B6 /* SummationOfPrimes.swift */,
 				285288791D930CED00244D49 /* Info.plist */,
 			);
 			path = PrimesTest;
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					285288741D930CED00244D49 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28EC1E6E1D938D8F00BE86B6 /* SummationOfPrimes.swift in Sources */,
+				285288A41D932F8400244D49 /* SumSquareDifference.swift in Sources */,
+				28EC1E6C1D938D6800BE86B6 /* Multiples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +249,7 @@
 		2852887E1D930CED00244D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -247,12 +261,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.IronYard.PrimesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2852887F1D930CED00244D49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -264,6 +281,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.IronYard.PrimesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +304,7 @@
 				2852887F1D930CED00244D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
